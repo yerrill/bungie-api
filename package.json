@@ -1,0 +1,19 @@
+{
+  "name": "bungie-api",
+  "version": "1.0.0",
+  "description": "Bungie's Destiny API Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yerrill/bungie-api.git"
+  },
+  "author": "Zach Yerrill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yerrill/bungie-api/issues"
+  },
+  "homepage": "https://github.com/yerrill/bungie-api#readme"
+}
