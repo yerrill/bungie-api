@@ -106,3 +106,4 @@ dist
 # Other Files
 secrets.json
 testBench.js
+Tests/
