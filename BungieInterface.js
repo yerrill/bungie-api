@@ -1,9 +1,11 @@
 const https = require('https');
+const EventE = require('events');
 
 
 class BInterface{
 	constructor(key){
 		this.apikey = key;
+		this.Event = new EventE();
 	}
 
 	// Make API request
@@ -30,18 +32,28 @@ class BInterface{
 
 		const req = https.request(options, res => {
 			console.log(`statusCode: ${res.statusCode}`)
+			var buff = []
 
 			res.on('data', d => {
-				process.stdout.write(d)
-			})
-		})
+				//process.stdout.write(d)
+				buff.push(d);
+			});
+
+			res.on('end', () => {
+				this.Event.emit('BungieReturn', JSON.parse(Buffer.concat(buff).toString("utf8")));
+			});
+		});
 
 		req.on('error', error => {
-			console.error(error)
-		})
+			console.error(error);
+		});
 
-		req.end()
+		req.end();
 	};
+
+	on(name, callback){
+		this.Event.on(name, callback);
+	}; // Event wrapper
 
 	/*
 		Bungie's Destiny 2 API calls (Limited)
