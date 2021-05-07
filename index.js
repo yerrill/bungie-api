@@ -8,7 +8,12 @@ console.log(key)
 
 var bungie = new bInt(key);
 
-//Destiny2_GetDestinyManifest()
+bungie.on('BungieReturn', (d)=> {
+  console.log(JSON.stringify(d, null, 2));
+});
+
+
+bungie.Destiny2_GetDestinyManifest()
 
 //Destiny2_SearchDestinyPlayer('3', 'Your Name Here', true);
 
@@ -17,8 +22,5 @@ var bungie = new bInt(key);
 //Destiny2_GetProfile('2', 'MemID', [200])
 
 //Destiny2_GetActivityHistory('2', 'memID', 'charID', 1, 32, 0)
-bungie.on('BungieReturn', (d)=> {
-  console.log(JSON.stringify(d, null, 2));
-});
 
-bungie.Destiny2_GetPostGameCarnageReport("8237845454")
+//bungie.Destiny2_GetPostGameCarnageReport("8237845454")
