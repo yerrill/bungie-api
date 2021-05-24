@@ -14,13 +14,3 @@ bungie.on('BungieReturn', (d)=> {
 
 
 bungie.Destiny2_GetDestinyManifest()
-
-//Destiny2_SearchDestinyPlayer('3', 'Your Name Here', true);
-
-//Destiny2_GetLinkedProfiles('2', 'MemberId', false)
-
-//Destiny2_GetProfile('2', 'MemID', [200])
-
-//Destiny2_GetActivityHistory('2', 'memID', 'charID', 1, 32, 0)
-
-//bungie.Destiny2_GetPostGameCarnageReport("8237845454")
