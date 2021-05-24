@@ -1,8 +1,9 @@
 # Bungie API notes
 ## Destiny Manifest Notable Links
 jsonWorldComponentContentPaths
-* DestinyInventoryItemDefinition: Links located in manifest
-* DestinyInventoryItemLiteDefinition: Links located in manifest
+* DestinyInventoryItemDefinition
+* DestinyInventoryItemLiteDefinition
+* DestinyItemCategoryDefinition
 
 # Program Notes
 ## secrets.json file
