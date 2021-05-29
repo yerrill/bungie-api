@@ -1,0 +1,1 @@
+* Possibly restructure _Bungie_ class with a wrapper
