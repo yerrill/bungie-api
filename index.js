@@ -1,31 +1,31 @@
 const https = require('https')
 const fs = require("fs")
-const bInt = require("./BungieInterface.js")
-const EventEm = require('events');
+const EventE = require('events');
+const conn = require("./connection.js")
+
+//API CALLS
+const core = require("./core.js")
 
 // Load API key from secrets file (synchonously)
-//const key = JSON.parse(fs.readFileSync('secrets.json', 'utf8'))["key"]
-//console.log(key)
+const key = JSON.parse(fs.readFileSync('secrets.json', 'utf8'))["key"]
+console.log(key)
 
-/*
-interface.on('BungieReturn', (d)=> {
-  			console.log(JSON.stringify(d, null, 2));
-		});*/
 
 class Bungie{
 	constructor(key){
-		this.interface = new bInt(key);
-		this.Events = new EventEm();
-	};
+		this.apikey = key;
+		this.Event = new EventE();
+		this.web = new conn(this.apikey)
+		this.API_core = new core(this.web)
+	}
 
-	get apiInterface() {
-		return this.interface;
-	};
-
-	getManifest(callback) {
-		this.interface.on('BungieReturn', callback); // Register Callback function for return
-		this.interface.Destiny2_GetDestinyManifest();
-	};
+	get core(){
+		return this.API_core;
+	}
 };
+
+const b = new Bungie(key)
+b.core.Destiny2_GetDestinyManifest()
+.then(r => console.log(r))
 
 module.exports = Bungie;
