@@ -7,8 +7,8 @@ const conn = require("./connection.js")
 const core = require("./core.js")
 
 // Load API key from secrets file (synchonously)
-const key = JSON.parse(fs.readFileSync('secrets.json', 'utf8'))["key"]
-console.log(key)
+//const key = JSON.parse(fs.readFileSync('secrets.json', 'utf8'))["key"]
+//console.log(key)
 
 
 class Bungie{
@@ -24,8 +24,9 @@ class Bungie{
 	}
 };
 
+/*
 const b = new Bungie(key)
 b.core.Destiny2_GetDestinyManifest()
-.then(r => console.log(r))
+.then(r => console.log(r))*/
 
 module.exports = Bungie;
