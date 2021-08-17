@@ -1,4 +1,4 @@
-# Season of Arivals (11)
+# Season of Arrivals (11)
 * "/common/destiny2_content/icons/796813aa6cf8afe55aed4efc2f9c609b.png"
 * ["/common/destiny2_content/icons/796813aa6cf8afe55aed4efc2f9c609b.png"](https://bungie.net/common/destiny2_content/icons/796813aa6cf8afe55aed4efc2f9c609b.png)
 
