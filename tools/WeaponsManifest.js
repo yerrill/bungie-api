@@ -1,5 +1,23 @@
 const fs = require("fs")
 
+function hasOneOf(search, key){
+  var contains = false;
+
+  for(const item in search){
+    if(contains){ break; }
+
+    for(const keyItem in key){
+      console.log(`${search[item]} ${key[keyItem]}  ${search[item] === key[keyItem]}`)
+      if(search[item] === key[keyItem]){
+        contains = true
+        break
+      }
+    }
+  }
+
+  return contains
+}
+
 const inv = JSON.parse(fs.readFileSync('../data/DestinyInventoryItemLiteDefinition.json', 'utf8'))
 
 const acceptableHashes = [1]
